@@ -1,11 +1,11 @@
-package Polymarphism;
-
+package Encasulation;
+//Make a BankAccount class with a private balance field and public deposit() and withdraw() methods.
 public class BankAccount {
         // Private field to store the balance
         private double balance;
 
         // Constructor to initialize the balance (optional)
-        public BankAccount() {
+        public BankAccount()  {
             this.balance = 0.0;
         }
 

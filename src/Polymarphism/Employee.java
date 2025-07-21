@@ -1,36 +1,30 @@
 package Polymarphism;
-
+//Implement method overriding in a class hierarchy: Employee → Manager,
+// where calculateBonus() behaves differently.
 public class Employee {
-        protected String name;
-        protected double salary;
-
-        public Employee(String name, double salary) {
-            this.name = name;
-            this.salary = salary;
-        }
-        public double calculateBonus() {
-            // 10% bonus for a regular employee
-            return salary * 0.10;
-        }
-
-        public void displayInfo() {
-            System.out.println("Employee: " + name);
-            System.out.println("Salary  " + salary);
-            System.out.println("Bonus " + calculateBonus());
-        }
+    void calculateBonus(){
+        System.out.println("calculate employee  bonus ");
+        int salary = 20000;
+        int bonus = 200;
+        int totalSalary = salary + bonus;
+        System.out.println("Employee Total Salary: " + totalSalary);
     }
-    class Manager extends Employee {
-        private double TPS;//TeamPerformanceScore
+}
+class Manager extends Employee{
+    @Override
+    void calculateBonus(){
+        System.out.println("calculate manger bonus ");
+        int salary = 50000;
+        int bonus = 1000;
+        int totalSalary = salary + bonus;
+        System.out.println("manager  Total Salary: " + totalSalary);
 
-        public Manager(String name, double salary) {
-            super(name, salary);
-            this.TPS = TPS;
-        }
-        @Override
-        public double calculateBonus() {
-            // 15% bonus for a regular employee
-            return salary * 0.15 + TPS * 500;
-        }
     }
+}
+class Bonus {
+    public static void main(String[] args) {
+        Employee e = new Manager();
+        e.calculateBonus();
 
-
+    }
+}

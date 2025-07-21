@@ -21,7 +21,7 @@ class Dog extends Animal {
     }
 }
 
-class main{
+class Test {
     public static void main(String[] args) {
         Animal a = new Dog("jaci");
         a.sound();

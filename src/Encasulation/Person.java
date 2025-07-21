@@ -1,8 +1,9 @@
-package Inheritance;
+package Encasulation;
 //Create a Person class with private fields name and age. Use getters and setters to access them.
 public class Person {
     private String name;
     private int age;
+
     public Person(String name, int age) {
         this.name = name;
         this.age = age;
